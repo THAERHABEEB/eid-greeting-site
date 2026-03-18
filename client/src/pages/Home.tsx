@@ -1,159 +1,257 @@
 import { useState } from 'react';
 import FloatingParticles from '@/components/FloatingParticles';
 import Countdown from '@/components/Countdown';
-import { Heart } from 'lucide-react';
 
 export default function Home() {
   const [showMessage, setShowMessage] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-100 via-yellow-50 to-pink-50 overflow-hidden">
+    <div className="min-h-screen bg-white overflow-hidden">
       <FloatingParticles />
 
-      {/* Section 1: Hero */}
+      {/* Section 1: Hero with Lanterns and Moon */}
       <section
-        className="eid-section relative min-h-screen flex flex-col items-center justify-center"
+        className="eid-section relative"
         style={{
-          backgroundImage:
-            'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663406205528/j7zpC9QDWZ2kXCjt6gwH9m/eid-hero-bg-KzQ5vG6PukTT3b2qrsBQF5.webp)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          background: 'linear-gradient(135deg, #FFE4F0 0%, #FFF9E6 50%, #FFE4F0 100%)',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-pink-100/50"></div>
-        <div className="relative z-10 text-center px-4">
-          <h1 className="eid-title mb-6 animate-bounce">
-            كل عيد وأنتِ أحلى بنوتة في الدنيا يا حبيبتي
-          </h1>
-          <div className="flex justify-center gap-4 mb-8 flex-wrap">
-            <span className="text-4xl animate-pulse">🌙</span>
-            <span className="text-4xl animate-pulse" style={{ animationDelay: '0.2s' }}>
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          {/* Decorative Elements */}
+          <div className="absolute top-12 left-8 text-5xl animate-bounce">✨</div>
+          <div className="absolute top-20 right-12 text-4xl float">✨</div>
+
+          {/* Moon */}
+          <div className="flex justify-center mb-8">
+            <span className="text-8xl float">🌙</span>
+          </div>
+
+          {/* Lanterns */}
+          <div className="flex justify-center gap-8 mb-12">
+            <span className="text-6xl animate-bounce" style={{ animationDelay: '0s' }}>
               🏮
             </span>
-            <span className="text-4xl animate-pulse" style={{ animationDelay: '0.4s' }}>
-              🌙
+            <span className="text-6xl animate-bounce" style={{ animationDelay: '0.2s' }}>
+              🏮
+            </span>
+            <span className="text-6xl animate-bounce" style={{ animationDelay: '0.4s' }}>
+              🏮
             </span>
           </div>
+
+          {/* Main Title */}
+          <h1 className="eid-title mb-8">
+            كل عيد وأنتِ أحلى بنوتة في الدنيا يا حبيبتي
+          </h1>
+
+          {/* Decorative Line with Rose */}
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <span className="text-3xl">━━━</span>
+            <span className="text-4xl">🌹</span>
+            <span className="text-4xl">💛</span>
+            <span className="text-3xl">━━━</span>
+          </div>
+
+          {/* Secondary Text */}
+          <div className="space-y-4 mb-8">
+            <p className="eid-subtitle">كل عيد وأنتِ أحلى بنوتة في الدنيا يا حبيبتي</p>
+            <p className="text-2xl" style={{ color: '#FFD700', fontFamily: 'Amiri, serif' }}>
+              تسرتوا البيشا
+            </p>
+          </div>
+
+          {/* Scattered Hearts and Emojis */}
+          <div className="absolute bottom-20 left-12 text-3xl float">💕</div>
+          <div className="absolute bottom-32 right-8 text-2xl animate-bounce">💛</div>
         </div>
       </section>
 
       {/* Section 2: Photo Frame */}
-      <section className="eid-section min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-pink-50 to-yellow-50">
-        <div className="relative z-10 w-full max-w-4xl px-4">
-          <h2 className="eid-subtitle mb-12 fade-in-up">
-            ✨ عيد فطر سعيد يا أغلى الناس ✨
+      <section
+        className="eid-section relative"
+        style={{
+          background: 'linear-gradient(135deg, #FFE4F0 0%, #FFFACD 100%)',
+        }}
+      >
+        <div className="relative z-10 w-full max-w-4xl px-4 mx-auto">
+          {/* Top Title */}
+          <h2 className="eid-subtitle mb-8 flex justify-center items-center gap-4">
+            <span>✨</span>
+            <span>عيد فطر سعيد يا أغلى الناس</span>
+            <span>✨</span>
           </h2>
 
+          {/* Decorative Lines with Hearts */}
+          <div className="flex justify-center items-center gap-4 mb-12">
+            <span className="text-2xl">━━━━</span>
+            <span className="text-3xl">❤️</span>
+            <span className="text-2xl">━━━━</span>
+            <span className="text-3xl">❤️</span>
+            <span className="text-2xl">━━━━</span>
+          </div>
+
+          {/* Heart Frame Photo */}
           <div className="flex justify-center mb-12">
-            <div className="heart-frame shadow-2xl">
+            <div className="heart-frame">
               <img
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
                 alt="صورة خاصة"
-                className="w-full h-full object-cover"
               />
             </div>
           </div>
 
-          <div className="text-center">
-            <p className="eid-subtitle text-pink-700 mb-8">
-              وعيدك سعيد يا أحلى حاجة حصلتلي
-            </p>
-          </div>
+          {/* Scattered Decorations */}
+          <div className="absolute top-32 left-8 text-3xl float">💕</div>
+          <div className="absolute top-40 right-12 text-2xl animate-bounce">✨</div>
+          <div className="absolute bottom-32 left-16 text-2xl float">🌹</div>
+          <div className="absolute bottom-40 right-20 text-3xl animate-bounce">💛</div>
         </div>
       </section>
 
       {/* Section 3: Interactive Button */}
-      <section className="eid-section min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-yellow-50 to-pink-100">
-        <div className="relative z-10 w-full max-w-2xl px-4 text-center">
+      <section
+        className="eid-section relative"
+        style={{
+          background: 'linear-gradient(135deg, #FFFACD 0%, #FFD700 50%, #FFFACD 100%)',
+        }}
+      >
+        <div className="relative z-10 w-full max-w-3xl px-4 mx-auto text-center">
+          {/* Top Message */}
+          <p className="eid-subtitle mb-8">وعيدك سعيد يا أحلى حاجة حصلتلي</p>
+
+          {/* Decorative Elements */}
+          <div className="flex justify-center gap-6 mb-12">
+            <span className="text-4xl">🌹</span>
+            <span className="text-4xl">💛</span>
+            <span className="text-4xl">🌹</span>
+          </div>
+
+          {/* Main Button */}
           <button
             onClick={() => setShowMessage(!showMessage)}
             className="eid-button mb-8 mx-auto block"
           >
-            اضغطي هنا لو بتحبيني برضو 💕
+            اضغطي هنا لو بتحبيني برضو ❤️
           </button>
 
+          {/* Message Box */}
           {showMessage && (
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl fade-in-up">
-              <p className="eid-subtitle mb-6">
+            <div
+              className="rounded-3xl p-8 md:p-12 shadow-2xl fade-in-up"
+              style={{
+                background: 'linear-gradient(135deg, #FF69B4 0%, #FF1493 100%)',
+              }}
+            >
+              <p className="text-2xl md:text-3xl font-bold text-white mb-6">
                 ❤️ شكراً على حبك وعطفك ❤️
               </p>
-              <p className="text-lg md:text-xl text-pink-700 font-semibold leading-relaxed">
+              <p className="text-lg md:text-xl text-white font-semibold leading-relaxed">
                 أنتِ أغلى ما في حياتي، وكل يوم معك هو عيد بالنسبة لي.
-                <br />
-                <br />
-                كل عام وأنتِ أقرب لأحلامك وطموحاتك، وأتمنى أن تكون كل أيامك
-                مليئة بالفرح والسعادة.
               </p>
             </div>
           )}
+
+          {/* Scattered Decorations */}
+          <div className="absolute top-20 left-12 text-3xl float">💕</div>
+          <div className="absolute bottom-32 right-8 text-2xl animate-bounce">🎀</div>
         </div>
       </section>
 
       {/* Section 4: Countdown */}
-      <section className="eid-section min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-pink-100 to-pink-200">
-        <div className="relative z-10 w-full max-w-4xl px-4">
-          <h2 className="eid-title mb-12 text-white drop-shadow-lg">
-            ⏳ العد التنازلي لأول أيام العيد ⏳
+      <section
+        className="eid-section relative"
+        style={{
+          background: 'linear-gradient(135deg, #FFD700 0%, #FF69B4 50%, #FF1493 100%)',
+        }}
+      >
+        <div className="relative z-10 w-full max-w-4xl px-4 mx-auto">
+          {/* Title with Hourglass */}
+          <h2 className="eid-title mb-8 text-white flex justify-center items-center gap-4">
+            <span>⏳</span>
+            <span>العد التنازلي لأول أيام العيد</span>
+            <span>⏳</span>
           </h2>
 
-          <div className="bg-gradient-to-r from-pink-400 to-rose-400 rounded-3xl p-8 md:p-12 shadow-2xl">
+          {/* Countdown Container */}
+          <div className="bg-gradient-to-r from-yellow-200 to-pink-300 rounded-3xl p-8 md:p-12 shadow-2xl">
             <Countdown />
           </div>
 
-          <div className="mt-12 text-center">
-            <div className="flex justify-center gap-4 flex-wrap">
-              <span className="text-5xl animate-bounce">🎁</span>
-              <span className="text-5xl animate-bounce" style={{ animationDelay: '0.2s' }}>
-                💝
-              </span>
-              <span className="text-5xl animate-bounce" style={{ animationDelay: '0.4s' }}>
-                🎁
-              </span>
-            </div>
+          {/* Gift Decorations */}
+          <div className="flex justify-center gap-6 mt-12">
+            <span className="text-5xl animate-bounce" style={{ animationDelay: '0s' }}>
+              🎁
+            </span>
+            <span className="text-5xl animate-bounce" style={{ animationDelay: '0.2s' }}>
+              💝
+            </span>
+            <span className="text-5xl animate-bounce" style={{ animationDelay: '0.4s' }}>
+              🎁
+            </span>
           </div>
+
+          {/* Scattered Hearts */}
+          <div className="absolute top-32 left-8 text-3xl float">💕</div>
+          <div className="absolute bottom-32 right-12 text-2xl animate-bounce">🎀</div>
         </div>
       </section>
 
       {/* Section 5: Closing Message */}
-      <section className="eid-section min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-100 to-cyan-100">
-        <div className="relative z-10 w-full max-w-3xl px-4 text-center">
-          <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl">
-            <div className="mb-8 flex justify-center">
-              <Heart className="w-16 h-16 text-pink-500 animate-pulse" />
-            </div>
+      <section
+        className="eid-section relative"
+        style={{
+          background: 'linear-gradient(135deg, #B0E0E6 0%, #90EE90 100%)',
+        }}
+      >
+        <div className="relative z-10 w-full max-w-3xl px-4 mx-auto text-center">
+          {/* Gift Box Decoration */}
+          <div className="flex justify-center mb-8">
+            <span className="text-6xl float">🎁</span>
+          </div>
 
-            <p className="eid-subtitle mb-8 text-pink-700">
+          {/* Main Message Box */}
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl mb-8">
+            {/* Main Text */}
+            <p className="eid-subtitle mb-6">
               ربنا يخليكِ ليا ويحلينا لبعض
             </p>
 
-            <p className="text-lg md:text-xl text-pink-700 font-semibold leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-red-600 font-semibold leading-relaxed mb-8">
               ويجعل كل أيامنا عيد ما دمتِ بجانبي
             </p>
 
-            <div
-              className="mb-8"
-              style={{
-                backgroundImage:
-                  'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663406205528/j7zpC9QDWZ2kXCjt6gwH9m/eid-footer-decoration-P9bDPBYmkcj9Ryo5RzfEHS.webp)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                height: '200px',
-                borderRadius: '1.5rem',
-              }}
-            ></div>
-
-            <p className="text-2xl md:text-3xl font-bold text-pink-600">
+            {/* Signature */}
+            <p className="text-2xl md:text-3xl font-bold" style={{ color: '#FF1493' }}>
               - من قلبي ليكِ 💕
             </p>
           </div>
+
+          {/* Sweets and Treats Decoration */}
+          <div className="flex justify-center flex-wrap gap-4 mb-8">
+            <span className="text-4xl">🎂</span>
+            <span className="text-4xl">🍫</span>
+            <span className="text-4xl">☕</span>
+            <span className="text-4xl">🍪</span>
+            <span className="text-4xl">🍩</span>
+            <span className="text-4xl">🍰</span>
+          </div>
+
+          {/* Bottom Message */}
+          <p className="text-xl md:text-2xl font-bold" style={{ color: '#8B4513' }}>
+            شوكولاتة من اختيارك 🍫
+          </p>
+
+          {/* Scattered Decorations */}
+          <div className="absolute top-20 left-8 text-3xl float">💕</div>
+          <div className="absolute bottom-32 right-12 text-2xl animate-bounce">💕</div>
         </div>
       </section>
 
-      {/* Decorative Elements */}
-      <div className="fixed bottom-8 right-8 text-4xl animate-bounce pointer-events-none">
+      {/* Floating Decorations */}
+      <div className="fixed bottom-8 right-8 text-5xl animate-bounce pointer-events-none">
         💕
       </div>
-      <div className="fixed top-1/4 left-8 text-3xl float pointer-events-none">
+      <div className="fixed top-1/4 left-8 text-4xl float pointer-events-none">
         ✨
       </div>
     </div>

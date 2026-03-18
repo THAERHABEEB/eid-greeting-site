@@ -43,39 +43,39 @@
 }
 
 :root {
-  --primary: #ec4899;
-  --primary-foreground: #fef2f2;
-  --sidebar-primary: #db2777;
-  --sidebar-primary-foreground: #fef2f2;
-  --chart-1: #fbbf24;
-  --chart-2: #f97316;
-  --chart-3: #ec4899;
-  --chart-4: #d946ef;
-  --chart-5: #a855f7;
-  --radius: 1rem;
-  --background: #fffbf5;
-  --foreground: #7c2d12;
-  --card: #fef5f1;
-  --card-foreground: #7c2d12;
-  --popover: #fef5f1;
-  --popover-foreground: #7c2d12;
-  --secondary: #fde68a;
-  --secondary-foreground: #92400e;
-  --muted: #fce7f3;
-  --muted-foreground: #be185d;
-  --accent: #ec4899;
-  --accent-foreground: #fef2f2;
-  --destructive: #dc2626;
-  --destructive-foreground: #fef2f2;
-  --border: #fce7f3;
-  --input: #fce7f3;
-  --ring: #ec4899;
-  --sidebar: #fef5f1;
-  --sidebar-foreground: #7c2d12;
-  --sidebar-accent: #ec4899;
-  --sidebar-accent-foreground: #fef2f2;
-  --sidebar-border: #fce7f3;
-  --sidebar-ring: #ec4899;
+  --primary: #FF1493;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #FF1493;
+  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: #FFD700;
+  --chart-2: #FF8C00;
+  --chart-3: #FF1493;
+  --chart-4: #E91E63;
+  --chart-5: #C2185B;
+  --radius: 1.5rem;
+  --background: #FFF5F0;
+  --foreground: #8B4513;
+  --card: #FFFFFF;
+  --card-foreground: #8B4513;
+  --popover: #FFFFFF;
+  --popover-foreground: #8B4513;
+  --secondary: #FFE4B5;
+  --secondary-foreground: #8B4513;
+  --muted: #FFB6D9;
+  --muted-foreground: #C2185B;
+  --accent: #FF1493;
+  --accent-foreground: #FFFFFF;
+  --destructive: #FF0000;
+  --destructive-foreground: #FFFFFF;
+  --border: #FFE4E1;
+  --input: #FFE4E1;
+  --ring: #FF1493;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #8B4513;
+  --sidebar-accent: #FF1493;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #FFE4E1;
+  --sidebar-ring: #FF1493;
 }
 
 :root {
@@ -134,36 +134,40 @@ input[type="radio"]:not(:disabled) {
 
   /* Eid Greeting Specific Styles */
   .eid-section {
-    @apply py-12 md:py-20 px-4;
+    @apply py-12 md:py-20 px-4 min-h-screen flex flex-col items-center justify-center;
   }
 
   .eid-title {
     @apply text-3xl md:text-5xl font-bold text-center mb-8;
     font-family: 'Amiri', serif;
-    color: #be185d;
+    color: #BE185D;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .eid-subtitle {
-    @apply text-lg md:text-2xl text-center mb-6;
+    @apply text-xl md:text-3xl text-center mb-6;
     font-family: 'Amiri', serif;
-    color: #ec4899;
+    color: #E91E63;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   }
 
   .eid-button {
-    @apply px-8 py-4 rounded-full font-bold text-white text-lg transition-all duration-300;
-    background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
-    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.3);
+    @apply px-12 py-5 rounded-full font-bold text-white text-xl transition-all duration-300;
+    background: linear-gradient(135deg, #FF1493 0%, #E91E63 100%);
+    box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);
+    border: none;
   }
 
   .eid-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(236, 72, 153, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 20, 147, 0.5);
   }
 
   .heart-frame {
-    @apply relative w-64 h-64 md:w-80 md:h-80 mx-auto;
+    @apply relative mx-auto overflow-hidden shadow-2xl;
+    width: 280px;
+    height: 280px;
     clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 50% 85%, 0% 100%, 0% 38%);
-    overflow: hidden;
   }
 
   .heart-frame img {
@@ -176,12 +180,13 @@ input[type="radio"]:not(:disabled) {
 
   .countdown-item {
     @apply flex flex-col items-center justify-center;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 3px solid rgba(255, 255, 255, 0.6);
     border-radius: 1.5rem;
     padding: 1.5rem;
-    min-width: 80px;
+    min-width: 90px;
+    min-height: 90px;
   }
 
   .countdown-number {
@@ -190,8 +195,8 @@ input[type="radio"]:not(:disabled) {
   }
 
   .countdown-label {
-    @apply text-sm md:text-base mt-2;
-    color: rgba(255, 255, 255, 0.9);
+    @apply text-sm md:text-base mt-2 font-semibold;
+    color: rgba(255, 255, 255, 0.95);
   }
 
   /* Floating Animation */
@@ -200,7 +205,7 @@ input[type="radio"]:not(:disabled) {
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(-20px);
+      transform: translateY(-15px);
     }
   }
 
@@ -238,7 +243,7 @@ input[type="radio"]:not(:disabled) {
     }
     100% {
       opacity: 0;
-      transform: translateY(-100px) translateX(100px);
+      transform: translateY(-150px) translateX(80px);
     }
   }
 
@@ -258,5 +263,19 @@ input[type="radio"]:not(:disabled) {
 
   .pulse-scale {
     animation: pulse-scale 2s ease-in-out infinite;
+  }
+
+  /* Bounce Animation */
+  @keyframes bounce-custom {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .bounce-custom {
+    animation: bounce-custom 1.5s ease-in-out infinite;
   }
 }
